@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="mat-display-2 center">
+		Nurse Dashboard
+	</div>
+	<div class="main__content">
+		<div
+			fxLayout="row wrap"
+			fxLayout.lt-sm="column"
+			fxLayoutGap="32px"
+			fxLayoutAlign="flex-start">
+
+			<ng-container *ngFor="let _ of [1,2,3,4,5,6,7,8]">
+				<div
+					fxFlex="0 1 calc(33.3% - 32px)"
+					fxFlex.lt-md="0 1 calc(50% - 32px)"
+					fxFlex.lt-sm="100%">
+					<!--
+					style="padding: 7px; margin: 7px; border: 2px solid slategrey;">
+						 -->
+					<div
+					gdAreas="header header | content content | footer footer"
+					gdGap="16px"
+					gdRows="auto auto auto"
+					gdAreas.lt-md="header | content | footer"
+					gdRows.lt-md="auto auto auto">
+
+						<mat-card appMaterialElevation>
+							<mat-card-header class="" fxLayoutAlign="center center">
+								<mat-card-title class="header" gdArea="header">
+									<p>Patient_Name</p>
+								</mat-card-title>
+							</mat-card-header>
+							<br>
+							<p class="content" gdArea="content">Room No.</p>
+							<mat-card-content fxLayout="row wrap" fxLayoutAlign="center center">
+								<p class="footer" gdArea="footer"><button mat-button (click)="openDialog()">Check Status</button>
+								</p>
+							</mat-card-content>
+						</mat-card>
+					</div>
+				</div>
+			</ng-container>
+		</div>
+	</div>
+</div>

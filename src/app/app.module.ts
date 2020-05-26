@@ -1,18 +1,56 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/* For Custom Icons */
+import { HttpClientModule } from "@angular/common/http";
+
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+
+// For Dialog
+import { AddEntryDialog } from './doctor/doctor.component'
+import { CheckStatusDialog } from './doctor/doctor.component'
+import { CheckStatus } from './nurse/nurse.component'
+
+/* Material Import */
+import { MaterialModule } from "./material/material.module";
+import { FlexLayoutModule } from "@angular/flex-layout";
+
+/* Directives */
+import { MaterialElevationDirective } from "./material/material-elevation.directive";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		NavbarComponent,
+		FooterComponent,
+		routingComponents,
+
+		// For Dialog
+		AddEntryDialog,
+		CheckStatusDialog,
+		CheckStatus,
+
+		/* Directives */
+		MaterialElevationDirective,
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+
+		HttpClientModule,
+
+		/* Material Import */
+		MaterialModule,
+		FlexLayoutModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
+
 export class AppModule { }

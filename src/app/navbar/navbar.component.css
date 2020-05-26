@@ -1,0 +1,15 @@
+mat-toolbar
+{
+	min-height: 70px;
+}
+
+span
+{
+	padding-right: 1rem;
+	height: 40px;
+}
+
+.fonts
+{
+	font-size: 22px;
+}
