@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSelectModule } from '@angular/material/select';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -27,6 +29,8 @@ const MaterialComponents = [
 	MatInputModule,
 	MatMenuModule,
 	MatPaginatorModule,
+	MatProgressBarModule,
+	MatSelectModule,
 	MatSortModule,
 	MatTableModule,
 	MatTabsModule,

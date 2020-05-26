@@ -46,5 +46,7 @@ export class CheckStatusDialog {}
 	templateUrl: 'addEntryDialog.html',
 })
 
-export class AddEntryDialog {}
+export class AddEntryDialog {
+	bloodGroup: string[] = ["O−", "O+", "A−", "A+", "B−", "B+", "AB−", "AB+"];
+}
 
