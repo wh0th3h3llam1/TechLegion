@@ -1,21 +1,26 @@
 <div style="width: 400px;">
-	<h2 mat-dialog-title>Patient Details</h2>
+	<h2 mat-dialog-title align="center"><b>Patient Details</b></h2>
 
 	<mat-dialog-content class="mat-typography">
 		<h3><b>Patient Name</b></h3>
-		<p>Jon Snow</p>
+		<p>{{ data.name }}</p>
 		<br>
 		<h3><b>Age</b></h3>
-		<p>42</p>
+		<p>{{ data.age }}</p>
 		<br>
 		<h3><b>Blood Group</b></h3>
-		<p>A+</p>
+		<p>{{ data.blood_grp }}</p>
 		<br>
-		<h3><b>Drip Status :</b> 40 %</h3>
+		<h3><b>Drip Status : </b>{{ data.drip_status }} % Completed</h3>
 		<p>
-			<mat-progress-bar mode="determinate" value="40" color="warn"></mat-progress-bar>
+			<ng-container *ngIf="data.drip_status > 89; then thenTemplate; else elseTemplate"></ng-container>
+			<ng-template #thenTemplate>
+				<mat-progress-bar mode="determinate" value="{{ data.drip_status }}" color="warn"></mat-progress-bar>
+			</ng-template>
+			<ng-template #elseTemplate>
+				<mat-progress-bar mode="determinate" value="{{ data.drip_status }}"></mat-progress-bar>
+			</ng-template>
 		</p>
-
 	</mat-dialog-content>
 
 	<mat-dialog-actions align="end">

@@ -4,6 +4,11 @@ a
 	color: inherit;
 }
 
+.center
+{
+	text-align: center;	
+}
+
 :host
 {
 	display: block;

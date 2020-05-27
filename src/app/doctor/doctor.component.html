@@ -21,7 +21,8 @@
 			fxLayoutGap="32px"
 			fxLayoutAlign="flex-start">
 
-			<ng-container *ngFor="let _ of [1,2,3,4,5,6,7,8]">
+			<ng-container *ngFor="let item of fileData; let i = index">
+			<!-- <ng-container *ngFor="let _ of [1,2,3,4,5,6,7,8,9]"> -->
 				<div
 					fxFlex="0 1 calc(33.3% - 32px)"
 					fxFlex.lt-md="0 1 calc(50% - 32px)"
@@ -39,13 +40,14 @@
 						<mat-card appMaterialElevation>
 							<mat-card-header class="" fxLayoutAlign="center center">
 								<mat-card-title class="header" gdArea="header">
-									<p>Patient_Name</p>
+									<p>{{ item.name }}</p>
 								</mat-card-title>
 							</mat-card-header>
 							<br>
-							<p class="content" gdArea="content">Room No.</p>
+							<p class="center" gdArea="content">Room No. : {{ item.room_no }}</p>
 							<mat-card-content fxLayout="row wrap" fxLayoutAlign="center center">
-								<p class="footer" gdArea="footer"><button mat-flat-button (click)="openDialog()" color="warn">Check Status</button>
+								<p class="footer" gdArea="footer">
+									<button mat-flat-button (click)="openDialog($event)" color="warn" [attr.id]="item.room_no">Check Status</button>
 								</p>
 							</mat-card-content>
 						</mat-card>
