@@ -13,8 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 
 // For Dialog
 import { AddEntryDialog } from './doctor/doctor.component'
-import { CheckStatusDialog } from './doctor/doctor.component'
-import { CheckStatus } from './nurse/nurse.component'
+import { CheckStatusDoctor } from './doctor/doctor.component'
+import { CheckStatusNurse } from './nurse/nurse.component'
 
 /* Material Import */
 import { MaterialModule } from "./material/material.module";
@@ -32,8 +32,8 @@ import { MaterialElevationDirective } from "./material/material-elevation.direct
 
 		// For Dialog
 		AddEntryDialog,
-		CheckStatusDialog,
-		CheckStatus,
+		CheckStatusDoctor,
+		CheckStatusNurse,
 
 		/* Directives */
 		MaterialElevationDirective,

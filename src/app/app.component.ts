@@ -25,12 +25,7 @@ export class AppComponent {
 			"bolt",
 			this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/svg/bolt.svg")
 		);
-
-		this.matIconRegistry.addSvgIcon(
-			"drip",
-			this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/svg/intravenous-saline-drip.svg")
-		);
-
+		
 		this.matIconRegistry.addSvgIcon(
 			"drip1",
 			this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/svg/intravenous-saline-drip1.svg")

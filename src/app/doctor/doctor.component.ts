@@ -45,14 +45,16 @@ export class DoctorComponent implements OnInit {
 	openDialog(event):void
 	{
 		// To get ID of the element
-		// var target = event.target || event.srcElement || event.currentTarget;
+		let target = event.target.attributes.id || event.srcElement.attributes.id || event.currentTarget.attributes.id;
+		console.log(event);
+		let value = target.nodeValue;
 		
 		// Specifically for FireFox
-		var target = event.target || event.srcElement;
-		var idAttr = target.attributes.id;
-		var value = idAttr.nodeValue;
+		// let target = event.target || event.srcElement;
+		// let idAttr = target.attributes.id;
+		// let value = idAttr.nodeValue;
 
-		this.dialog.open(CheckStatusDialog, {"data" : this.filterById(value)});
+		this.dialog.open(CheckStatusDoctor, {"data" : this.filterById(value)});
 	}
 
 	addEntry():void
@@ -76,12 +78,12 @@ export interface PersonDetails
 }
 
 @Component({
-	selector: 'checkStatusDialog',
-	templateUrl: 'checkStatusDialog.html',
+	selector: 'checkStatusDoctor',
+	templateUrl: 'checkStatusDoctor.html',
 })
 
-export class CheckStatusDialog {
-	// public dialogRef: MatDialogRef<CheckStatusDialog>
+export class CheckStatusDoctor {
+	// public dialogRef: MatDialogRef<CheckStatusDoctor>
 	constructor(@Inject(MAT_DIALOG_DATA) public data : PersonDetails){}
 }
 

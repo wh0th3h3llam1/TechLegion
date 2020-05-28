@@ -40,22 +40,24 @@ export class NurseComponent implements OnInit {
 	openDialog(event):void
 	{
 		// To get ID of the element
-		// var target = event.target || event.srcElement || event.currentTarget;
+		let target = event.target.attributes.id || event.srcElement.attributes.id || event.currentTarget.attributes.id;
+		console.log(event);
+		let value = target.nodeValue;
 		
 		// Specifically for FireFox
-		var target = event.target || event.srcElement;
-		var idAttr = target.attributes.id;
-		var value = idAttr.nodeValue;
+		// let target = event.target || event.srcElement;
+		// let idAttr = target.attributes.id;
+		// let value = idAttr.nodeValue;
 
-		this.dialog.open(CheckStatus, {"data" : this.filterById(value)});
+		this.dialog.open(CheckStatusNurse, {"data" : this.filterById(value)});
 	}
 }
 
 @Component({
-	selector: 'checkStatus',
-	templateUrl: 'checkStatus.html',
+	selector: 'checkStatusNurse',
+	templateUrl: 'checkStatusNurse.html',
 })
 
-export class CheckStatus {
+export class CheckStatusNurse {
 	constructor(@Inject(MAT_DIALOG_DATA) public data : PersonDetails){}
 }
