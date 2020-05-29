@@ -21,6 +21,16 @@
 			</mat-select>
 		</mat-form-field>
 		<br>
+		<mat-form-field>
+			<mat-label>Drip rate</mat-label>
+			<mat-select>
+				<mat-option *ngFor="let dr of dripRate" [value]="dr">
+					{{ dr }}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<br>
+		
 	</form>
 
 	<mat-dialog-actions align="end">

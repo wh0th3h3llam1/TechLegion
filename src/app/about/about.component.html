@@ -1,0 +1,41 @@
+<div class="container">
+	<br><br>
+	<div class="center mat-display-1">
+		<h2>About Us</h2>
+	</div>
+	<br>
+	<div class="content center">
+		<div
+			fxLayout="row wrap"
+			fxLayout.lt-sm="column"
+			fxLayoutGap="32px"
+			fxLayoutAlign="flex-start">
+
+			<ng-container *ngFor="let item of fileData;">
+				<div
+					fxFlex="0 1 calc(33.3% - 32px)"
+					fxFlex.lt-md="0 1 calc(50% - 32px)"
+					fxFlex.lt-sm="100%">
+					
+					<div
+					gdAreas="header header | content content | footer footer"
+					gdGap="16px"
+					gdRows="auto auto auto"
+					gdAreas.lt-md="header | content | footer"
+					gdRows.lt-md="auto auto auto">
+						<mat-card appMaterialElevation >
+							<mat-card-header class="" fxLayoutAlign="center center">
+								<mat-card-title class="header" gdArea="header">
+									<p>{{ item.name }}</p>
+								</mat-card-title>
+							</mat-card-header>
+							<br>
+							<p class="center" gdArea="content" fxLayout="row wrap">{{ item.role }}</p>
+						</mat-card>
+					</div>
+				</div>
+			</ng-container>
+		</div>
+	</div>
+</div>
+<br><br><br><br><br><br><br><br><br>

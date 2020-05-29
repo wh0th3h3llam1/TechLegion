@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
 
 export class ReadJSONService {
 
-	filePath: string = "../../assets/data.json";
+	filePath: string = "../../assets/";
 
 	constructor(private httpClient: HttpClient){}
 
-	public getJSON(): Observable<any>
+	public getJSON(fileName): Observable<any>
 	{
 		// return this.httpClient.get("../../assets/files/product-lists/antibiotics.json");
-		return this.httpClient.get(this.filePath);
+		return this.httpClient.get(this.filePath + fileName + ".json");
 	}
 }

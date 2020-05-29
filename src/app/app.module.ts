@@ -22,6 +22,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 
 /* Directives */
 import { MaterialElevationDirective } from "./material/material-elevation.directive";
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
 	declarations: [
@@ -37,6 +38,8 @@ import { MaterialElevationDirective } from "./material/material-elevation.direct
 
 		/* Directives */
 		MaterialElevationDirective,
+
+		AboutComponent,
 	],
 	imports: [
 		BrowserModule,

@@ -13,19 +13,14 @@
 				<button class="fonts" routerLink="/" mat-button>Home</button>
 			</span>
 			<span>
-				<button class="fonts" mat-button>About Us</button>
-			</span>
-			<span>
-				<button class="fonts" mat-button>Contact Us</button>
+				<button class="fonts" routerLink="/about-us" mat-button>About</button>
 			</span>
 			<span>
 				<button
 					class="fonts"
 					mat-button
 					[matMenuTriggerFor]="login" #menuTrigger="matMenuTrigger">
-
 						<mat-icon>account_circle</mat-icon>
-						Login
 				</button>
 			</span>
 		</div>
@@ -51,10 +46,6 @@
 		<mat-icon>info</mat-icon>
 		About Us
 	</button>
-	<button class="fonts" routerLink="/contact-us" mat-menu-item>
-		<mat-icon>phone</mat-icon>
-		Contact Us
-	</button>
 	<button class="fonts" routerLink="/login" mat-menu-item>
 		<mat-icon>account_circle</mat-icon>
 		Login
@@ -73,3 +64,4 @@
 		</button>
 	</span>
 </mat-menu>
+

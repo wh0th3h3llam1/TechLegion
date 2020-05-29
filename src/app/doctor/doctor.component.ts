@@ -21,7 +21,7 @@ export class DoctorComponent implements OnInit {
 	fileData: any;
 
 	constructor(public dialog: MatDialog, private router: Router, private readJSON: ReadJSONService){
-		this.readJSON.getJSON().subscribe(data => {
+		this.readJSON.getJSON("data").subscribe(data => {
 			this.fileData = data;
 			// console.log(this.fileData);
 			},
@@ -95,4 +95,5 @@ export class CheckStatusDoctor {
 
 export class AddEntryDialog {
 	bloodGroup: string[] = ["O−", "O+", "A−", "A+", "B−", "B+", "AB−", "AB+"];
+	dripRate: string[] = ["10 drops/ml", "15 drops/ml"]
 }

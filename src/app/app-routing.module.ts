@@ -5,12 +5,14 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NurseComponent } from './nurse/nurse.component';
 import { DoctorComponent } from './doctor/doctor.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
 	{ path : 'login', component : LoginComponent },
 
 	{ path : 'doctor', component : DoctorComponent },
 	{ path : 'nurse', component : NurseComponent },
+	{ path : 'about-us', component : AboutComponent },
 
 	{ path : '', component : HomeComponent },
 
@@ -27,4 +29,5 @@ export const routingComponents = [
 	LoginComponent,
 	NurseComponent,
 	DoctorComponent,
+	AboutComponent
 ]

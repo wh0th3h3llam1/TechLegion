@@ -17,7 +17,7 @@ export class NurseComponent implements OnInit {
 	fileData: any;
 
 	constructor(public dialog: MatDialog, private router: Router, private readJSON: ReadJSONService){
-		this.readJSON.getJSON().subscribe(data => {
+		this.readJSON.getJSON("data").subscribe(data => {
 			this.fileData = data;
 			// console.log(this.fileData);
 			},

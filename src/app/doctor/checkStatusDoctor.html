@@ -16,6 +16,8 @@
 			<ng-container *ngIf="data.drip_status > 89; then thenTemplate; else elseTemplate"></ng-container>
 			<ng-template #thenTemplate>
 				<mat-progress-bar mode="determinate" value="{{ data.drip_status }}" color="warn"></mat-progress-bar>
+				<br>
+				<mat-icon>notifications_active</mat-icon>
 			</ng-template>
 			<ng-template #elseTemplate>
 				<mat-progress-bar mode="determinate" value="{{ data.drip_status }}"></mat-progress-bar>
